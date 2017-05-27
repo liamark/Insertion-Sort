@@ -3,6 +3,7 @@
 #define NO_OF_ELEMS 10
 
 void insertion_sort(int[], const int);
+void print_array(const int[], const int);
 
 int main()
 {
@@ -13,15 +14,19 @@ int main()
 
 void insertion_sort(int array[], const int length)
 {
-	for(int i = 0; i < length; i++)
+	for(int i = 1; i < length; i++)
 	{
-		j = i;
-		while(j > 0 && array[j - 1] > array[j])
+		int x = array[i];
+		j = i - 1;
+		
+		while(j >= 0 && array[j - 1] > x)
 		{
-			int temp = array[j];
-			array[j] = array[j - 1];
-			array[j - 1] = temp;
+			array[j + 1] = array[j];
 			j = j - 1;
 		}
+		
+		array[j + 1] = x;
 	}
 }
+
+
