@@ -24,15 +24,18 @@ void insertion_sort(int array[], const int length)
 {
 	for(int i = 1; i < length; i++)
 	{
+		// select value to be inserted
 		int x = array[i];
 		int j = i - 1;
 		
+		// find the position to insert value
 		while(j >= 0 && array[j] > x)
 		{
 			array[j + 1] = array[j];
 			j = j - 1;
 		}
 		
+		// insert the value
 		array[j + 1] = x;
 	}
 }
