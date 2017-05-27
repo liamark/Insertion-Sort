@@ -12,7 +12,10 @@ int main()
 	printf("\n Array before insertion sort: ");
 	print_array(array, NO_OF_ELEMS);
 	
+	insertion_sort(array, NO_OF_ELEMS);
 	
+	printf("\n\n Array after insertion sort: ");
+	print_array(array, NO_OF_ELEMS);
 	
 	return 0;
 }
@@ -24,7 +27,7 @@ void insertion_sort(int array[], const int length)
 		int x = array[i];
 		int j = i - 1;
 		
-		while(j >= 0 && array[j - 1] > x)
+		while(j >= 0 && array[j] > x)
 		{
 			array[j + 1] = array[j];
 			j = j - 1;
