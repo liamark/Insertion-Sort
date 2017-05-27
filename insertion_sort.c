@@ -9,6 +9,11 @@ int main()
 {
 	int array[NO_OF_ELEMS] = {12, 87, 43, 21, 79, 102, 54, 94, 255, 99};
 	
+	printf("\n Array before insertion sort: ");
+	print_array(array, NO_OF_ELEMS);
+	
+	
+	
 	return 0;
 }
 
@@ -17,7 +22,7 @@ void insertion_sort(int array[], const int length)
 	for(int i = 1; i < length; i++)
 	{
 		int x = array[i];
-		j = i - 1;
+		int j = i - 1;
 		
 		while(j >= 0 && array[j - 1] > x)
 		{
@@ -26,6 +31,14 @@ void insertion_sort(int array[], const int length)
 		}
 		
 		array[j + 1] = x;
+	}
+}
+
+void print_array(const int array[], const int length)
+{
+	for(int i = 0; i < length; i++)
+	{
+		printf("%d ", array[i]);
 	}
 }
 
