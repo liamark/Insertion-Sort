@@ -14,7 +14,7 @@ int main()
 	
 	insertion_sort(array, NO_OF_ELEMS);
 	
-	printf("\n\n Array after insertion sort: ");
+	printf("\n Array after insertion sort: ");
 	print_array(array, NO_OF_ELEMS);
 	
 	return 0;
@@ -37,6 +37,9 @@ void insertion_sort(int array[], const int length)
 		
 		// insert the value
 		array[j + 1] = x;
+		
+		printf("\n Step %d: ", i);
+		print_array(array, NO_OF_ELEMS);
 	}
 }
 
@@ -46,6 +49,7 @@ void print_array(const int array[], const int length)
 	{
 		printf("%d ", array[i]);
 	}
+	putchar('\n');
 }
 
 
